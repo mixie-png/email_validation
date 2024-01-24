@@ -1,0 +1,11 @@
+<p>The email address you entered ({{ one_email.email_address }}) is a VALID email address! Thank you!</p>
+
+<p>Email Addresses Entered:</p>
+<ul>
+    {% for one_email in all_emails %}
+        <li>{{ one_email.email_address }} {{ one_email.created_at }}</li>
+        <a href="/success/{{one_email.id}}/delete">Delete</a>
+    {% endfor %}
+</ul>
+
+<a href="/">Home</a>
